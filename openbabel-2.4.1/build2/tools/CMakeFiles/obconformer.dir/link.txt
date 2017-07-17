@@ -1,0 +1,1 @@
+/usr/bin/c++   -O2 -g -DNDEBUG -O2 -g  -Wl,--enable-new-dtags -Wl,--fatal-warnings -Wl,--no-undefined -lc -Wl,--enable-new-dtags -Wl,--fatal-warnings -Wl,--no-undefined -lc  CMakeFiles/obconformer.dir/obconformer.o  -o ../bin/obconformer -rdynamic ../lib/libopenbabel.so.5.0.0 -lm -ldl -lz -Wl,-rpath,/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/lib: 

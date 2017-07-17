@@ -1,0 +1,24 @@
+0 molecules converted
+
+
+
+           Your MOPAC executable, Version: 16.162L, has expired.
+           Please go to web-site: http://openmopac.net/Download_MOPAC_Executable_Step2.html to get a new version of MOPAC.
+           Do NOT request a new license key.  Academic license keys do not include time limits - the limit is in the program.
+           
+           Press (enter) to continue.
+
+forrtl: severe (24): end-of-file during read, unit 5, file stdin
+Image              PC                Routine            Line        Source             
+MOPAC2016.exe      0000000000F96BAE  Unknown               Unknown  Unknown
+MOPAC2016.exe      0000000000F95646  Unknown               Unknown  Unknown
+MOPAC2016.exe      0000000000F4CB22  Unknown               Unknown  Unknown
+MOPAC2016.exe      0000000000EF3B1C  Unknown               Unknown  Unknown
+MOPAC2016.exe      0000000000EF303C  Unknown               Unknown  Unknown
+MOPAC2016.exe      0000000000F25330  Unknown               Unknown  Unknown
+MOPAC2016.exe      0000000000699BF0  Unknown               Unknown  Unknown
+MOPAC2016.exe      00000000008002A7  Unknown               Unknown  Unknown
+MOPAC2016.exe      000000000040F12C  Unknown               Unknown  Unknown
+libc.so.6          0000003363C1ED5D  Unknown               Unknown  Unknown
+MOPAC2016.exe      000000000040F039  Unknown               Unknown  Unknown
+=>> PBS: job killed: walltime 7205 exceeded limit 7200

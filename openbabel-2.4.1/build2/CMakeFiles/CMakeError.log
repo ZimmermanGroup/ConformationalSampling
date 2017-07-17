@@ -1,0 +1,149 @@
+Determining if the include file conio.h exists failed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2154947238/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2154947238.dir/build.make CMakeFiles/cmTryCompileExec2154947238.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2154947238.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2154947238.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:19: error: conio.h: No such file or directory
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2154947238.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2154947238/fast] Error 2
+
+
+Determining if the rint exist failed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec837237120/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec837237120.dir/build.make CMakeFiles/cmTryCompileExec837237120.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec837237120.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec837237120.dir/CheckSymbolExists.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec837237120
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec837237120.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec837237120.dir/CheckSymbolExists.c.o  -o cmTryCompileExec837237120 -rdynamic 
+CMakeFiles/cmTryCompileExec837237120.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xc): undefined reference to `rint'
+collect2: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec837237120] Error 1
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec837237120/fast] Error 2
+
+File /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef rint
+  return ((int*)(&rint))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sranddev exist failed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec107698283/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec107698283.dir/build.make CMakeFiles/cmTryCompileExec107698283.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec107698283.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec107698283.dir/CheckSymbolExists.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8: error: ‘sranddev’ undeclared (first use in this function)
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8: error: (Each undeclared identifier is reported only once
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8: error: for each function it appears in.)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec107698283.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec107698283/fast] Error 2
+
+File /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sranddev
+  return ((int*)(&sranddev))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test SCANDIR_NEEDS_CONST failed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2082395233/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2082395233.dir/build.make CMakeFiles/cmTryCompileExec2082395233.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2082395233.dir/src.c.o
+/usr/bin/cc   -DSCANDIR_NEEDS_CONST -Werror   -o CMakeFiles/cmTryCompileExec2082395233.dir/src.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.c
+cc1: warnings being treated as errors
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.c:7: error: passing argument 3 of ‘scandir’ from incompatible pointer type
+/usr/include/dirent.h:252: note: expected ‘int (*)(const struct dirent *)’ but argument is of type ‘int (*)(struct dirent *)’
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2082395233.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2082395233/fast] Error 2
+
+Source file was:
+
+   #include <sys/types.h>
+   #include <dirent.h>
+    int main(){
+     extern int matchFiles (struct dirent *entry_p);
+     struct dirent **entries_pp;
+     int count = scandir ("./", &entries_pp, matchFiles, 0);
+     return count;
+    }
+   
+Performing C++ SOURCE FILE Test HAVE_STD_SHARED_PTR failed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3497972364/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3497972364.dir/build.make CMakeFiles/cmTryCompileExec3497972364.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3497972364.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_STD_SHARED_PTR -Werror   -o CMakeFiles/cmTryCompileExec3497972364.dir/src.cxx.o -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx:2: error: ‘shared_ptr’ is not a member of ‘std’
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx:2: error: expected primary-expression before ‘int’
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx:2: error: expected ‘;’ before ‘int’
+gmake[1]: *** [CMakeFiles/cmTryCompileExec3497972364.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3497972364/fast] Error 2
+
+Source file was:
+#include <memory>
+                           int main(){ std::shared_ptr<int> p; return 0; }
+Performing C++ SOURCE FILE Test HAVE_STD_TR1_SHARED_PTR failed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec21264979/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec21264979.dir/build.make CMakeFiles/cmTryCompileExec21264979.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec21264979.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_STD_TR1_SHARED_PTR -Werror   -o CMakeFiles/cmTryCompileExec21264979.dir/src.cxx.o -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx:2: error: ‘std::tr1’ has not been declared
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx:2: error: expected primary-expression before ‘int’
+/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx:2: error: expected ‘;’ before ‘int’
+gmake[1]: *** [CMakeFiles/cmTryCompileExec21264979.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec21264979/fast] Error 2
+
+Source file was:
+#include <memory>
+                           int main(){ std::tr1::shared_ptr<int> p; return 0; }

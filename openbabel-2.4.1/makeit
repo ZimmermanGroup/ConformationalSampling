@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+cmake ../ -DCMAKE_INSTALL_PREFIX=/export/zimmerman/paulzim/openbabel241 -DEIGEN2_INCLUDE_DIR=../eigen2

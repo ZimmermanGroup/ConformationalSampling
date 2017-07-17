@@ -1,0 +1,24 @@
+
+
+ in main() 
+
+ xyzfile: test.xyz
+  natoms: 154
+**Starting Confab 1.1.0
+**To support, cite Journal of Cheminformatics, 2011, 3, 8.
+..Input format = xyz
+..Output format = xyz
+..RMSD cutoff = 0.5
+..Energy cutoff = 50
+..Conformer cutoff = 250000
+..Write input conformation? False
+..Verbose? False
+
+**Molecule 1
+..title = 1   1_1_1_./Scratch/lib/28.xyz_1_1_./Scratch/lib/24.xyz
+..number of rotatable bonds = 12
+..tot conformations = 5668704
+..tot confs tested = 250000
+..below energy threshold = 0
+..generated 0 conformers
+

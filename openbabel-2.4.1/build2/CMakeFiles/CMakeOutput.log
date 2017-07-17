@@ -1,0 +1,731 @@
+The system is: Linux - 2.6.32-431.el6.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/3.2.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/3.2.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec361421750/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec361421750.dir/build.make CMakeFiles/cmTryCompileExec361421750.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec361421750.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec361421750.dir/testCCompiler.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec361421750
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec361421750.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec361421750.dir/testCCompiler.c.o  -o cmTryCompileExec361421750 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2948878741/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2948878741.dir/build.make CMakeFiles/cmTryCompileExec2948878741.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o   -c /export/apps/CMake/3.2.2/share/cmake-3.2/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec2948878741
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2948878741.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2948878741 -rdynamic  
+Using built-in specs.
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/:/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2948878741' '-rdynamic' '-mtune=generic'
+ /usr/libexec/gcc/x86_64-redhat-linux/4.4.7/collect2 --eh-frame-hdr --build-id -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2948878741 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../.. CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crtn.o
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2948878741/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2948878741.dir/build.make CMakeFiles/cmTryCompileExec2948878741.dir/build]
+  ignore line: [gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp']
+  ignore line: [/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o   -c /export/apps/CMake/3.2.2/share/cmake-3.2/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec2948878741]
+  ignore line: [/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2948878741.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2948878741 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/:/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2948878741' '-rdynamic' '-mtune=generic']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.4.7/collect2 --eh-frame-hdr --build-id -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2948878741 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../.. CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2948878741] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../..]
+    arg [CMakeFiles/cmTryCompileExec2948878741.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.4.7]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.4.7]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.4.7;/usr/lib64;/lib64;/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3720208309/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3720208309.dir/build.make CMakeFiles/cmTryCompileExec3720208309.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3720208309.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTryCompileExec3720208309.dir/feature_tests.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec3720208309
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3720208309.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3720208309.dir/feature_tests.c.o  -o cmTryCompileExec3720208309 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c89] compiler features compiled with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec226033726/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec226033726.dir/build.make CMakeFiles/cmTryCompileExec226033726.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec226033726.dir/feature_tests.c.o
+/usr/bin/cc   -std=c89 -o CMakeFiles/cmTryCompileExec226033726.dir/feature_tests.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec226033726
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec226033726.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec226033726.dir/feature_tests.c.o  -o cmTryCompileExec226033726 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2477685206/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2477685206.dir/build.make CMakeFiles/cmTryCompileExec2477685206.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2477685206.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2477685206.dir/testCXXCompiler.cxx.o -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec2477685206
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2477685206.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec2477685206.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec2477685206 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2643257887/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2643257887.dir/build.make CMakeFiles/cmTryCompileExec2643257887.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o -c /export/apps/CMake/3.2.2/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec2643257887
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2643257887.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2643257887 -rdynamic  
+Using built-in specs.
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/:/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2643257887' '-rdynamic' '-shared-libgcc' '-mtune=generic'
+ /usr/libexec/gcc/x86_64-redhat-linux/4.4.7/collect2 --eh-frame-hdr --build-id -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2643257887 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../.. CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crtn.o
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2643257887/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2643257887.dir/build.make CMakeFiles/cmTryCompileExec2643257887.dir/build]
+  ignore line: [gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp']
+  ignore line: [/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o -c /export/apps/CMake/3.2.2/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec2643257887]
+  ignore line: [/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2643257887.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2643257887 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/:/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2643257887' '-rdynamic' '-shared-libgcc' '-mtune=generic']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.4.7/collect2 --eh-frame-hdr --build-id -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2643257887 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../.. CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.4.7/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2643257887] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../..]
+    arg [CMakeFiles/cmTryCompileExec2643257887.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.4.7]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.4.7]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.4.7;/usr/lib64;/lib64;/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++0x] compiler features compiled with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec773540498/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec773540498.dir/build.make CMakeFiles/cmTryCompileExec773540498.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec773540498.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++0x -o CMakeFiles/cmTryCompileExec773540498.dir/feature_tests.cxx.o -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec773540498
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec773540498.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec773540498.dir/feature_tests.cxx.o  -o cmTryCompileExec773540498 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec15573652/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec15573652.dir/build.make CMakeFiles/cmTryCompileExec15573652.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec15573652.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTryCompileExec15573652.dir/feature_tests.cxx.o -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec15573652
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec15573652.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec15573652.dir/feature_tests.cxx.o  -o cmTryCompileExec15573652 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec342372052/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec342372052.dir/build.make CMakeFiles/cmTryCompileExec342372052.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec342372052.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec342372052.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec342372052
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec342372052.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec342372052.dir/CheckIncludeFile.c.o  -o cmTryCompileExec342372052 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file time.h exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec500877182/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec500877182.dir/build.make CMakeFiles/cmTryCompileExec500877182.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec500877182.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec500877182.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec500877182
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec500877182.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec500877182.dir/CheckIncludeFile.c.o  -o cmTryCompileExec500877182 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec508287538/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec508287538.dir/build.make CMakeFiles/cmTryCompileExec508287538.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec508287538.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec508287538.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec508287538
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec508287538.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec508287538.dir/CheckIncludeFile.c.o  -o cmTryCompileExec508287538 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file rpc/xdr.h exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec605323722/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec605323722.dir/build.make CMakeFiles/cmTryCompileExec605323722.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec605323722.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec605323722.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec605323722
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec605323722.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec605323722.dir/CheckIncludeFile.c.o  -o cmTryCompileExec605323722 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file regex.h exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3542356762/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3542356762.dir/build.make CMakeFiles/cmTryCompileExec3542356762.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3542356762.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3542356762.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3542356762
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3542356762.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3542356762.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3542356762 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sstream exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2903712891/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2903712891.dir/build.make CMakeFiles/cmTryCompileExec2903712891.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2903712891.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2903712891.dir/CheckIncludeFile.cxx.o -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTryCompileExec2903712891
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2903712891.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec2903712891.dir/CheckIncludeFile.cxx.o  -o cmTryCompileExec2903712891 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the snprintf exist passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3517240771/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3517240771.dir/build.make CMakeFiles/cmTryCompileExec3517240771.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3517240771.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3517240771.dir/CheckSymbolExists.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3517240771
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3517240771.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3517240771.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3517240771 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+File /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef snprintf
+  return ((int*)(&snprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strcasecmp exist passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec774068099/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec774068099.dir/build.make CMakeFiles/cmTryCompileExec774068099.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec774068099.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec774068099.dir/CheckSymbolExists.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec774068099
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec774068099.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec774068099.dir/CheckSymbolExists.c.o  -o cmTryCompileExec774068099 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+File /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasecmp
+  return ((int*)(&strcasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strncasecmp exist passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2744831059/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2744831059.dir/build.make CMakeFiles/cmTryCompileExec2744831059.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2744831059.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2744831059.dir/CheckSymbolExists.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2744831059
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2744831059.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2744831059.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2744831059 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+File /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncasecmp
+  return ((int*)(&strncasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function dlopen exists in the dl passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1267006276/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1267006276.dir/build.make CMakeFiles/cmTryCompileExec1267006276.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1267006276.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dlopen   -o CMakeFiles/cmTryCompileExec1267006276.dir/CheckFunctionExists.c.o   -c /export/apps/CMake/3.2.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1267006276
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1267006276.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dlopen    CMakeFiles/cmTryCompileExec1267006276.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1267006276 -rdynamic -ldl 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1718018802/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1718018802.dir/build.make CMakeFiles/cmTryCompileExec1718018802.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1718018802.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1718018802.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1718018802
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1718018802.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1718018802.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1718018802 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3989115558/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3989115558.dir/build.make CMakeFiles/cmTryCompileExec3989115558.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3989115558.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3989115558.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3989115558
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3989115558.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3989115558.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3989115558 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec450987730/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec450987730.dir/build.make CMakeFiles/cmTryCompileExec450987730.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec450987730.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec450987730.dir/CheckIncludeFile.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec450987730
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec450987730.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec450987730.dir/CheckIncludeFile.c.o  -o cmTryCompileExec450987730 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of clock_t passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1225119661/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1225119661.dir/build.make CMakeFiles/cmTryCompileExec1225119661.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1225119661.dir/CLOCK_T.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1225119661.dir/CLOCK_T.c.o   -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CheckTypeSize/CLOCK_T.c
+Linking C executable cmTryCompileExec1225119661
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1225119661.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1225119661.dir/CLOCK_T.c.o  -o cmTryCompileExec1225119661 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test HAVE_GCC_VISIBILITY succeded with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1443827799/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1443827799.dir/build.make CMakeFiles/cmTryCompileExec1443827799.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1443827799.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_GCC_VISIBILITY -Werror   -fvisibility=hidden -o CMakeFiles/cmTryCompileExec1443827799.dir/src.cxx.o -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1443827799
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1443827799.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_GCC_VISIBILITY -Werror    CMakeFiles/cmTryCompileExec1443827799.dir/src.cxx.o  -o cmTryCompileExec1443827799 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_STD_TR1_SHARED_PTR_IN_TR1_HEADER succeded with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec1016548360/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1016548360.dir/build.make CMakeFiles/cmTryCompileExec1016548360.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1016548360.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_STD_TR1_SHARED_PTR_IN_TR1_HEADER -Werror   -o CMakeFiles/cmTryCompileExec1016548360.dir/src.cxx.o -c /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1016548360
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1016548360.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_STD_TR1_SHARED_PTR_IN_TR1_HEADER -Werror    CMakeFiles/cmTryCompileExec1016548360.dir/src.cxx.o  -o cmTryCompileExec1016548360 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <tr1/memory>
+                           int main(){ std::tr1::shared_ptr<int> p; return 0; }
+Determining if the function getopt exists passed with the following output:
+Change Dir: /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec4262312466/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4262312466.dir/build.make CMakeFiles/cmTryCompileExec4262312466.dir/build
+gmake[1]: Entering directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_progress_report /export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4262312466.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getopt -Werror   -o CMakeFiles/cmTryCompileExec4262312466.dir/CheckFunctionExists.c.o   -c /export/apps/CMake/3.2.2/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4262312466
+/export/apps/CMake/3.2.2/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4262312466.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getopt -Werror    CMakeFiles/cmTryCompileExec4262312466.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4262312466 -rdynamic 
+gmake[1]: Leaving directory `/export/zimmerman/paulzim/bcat/openbabel-2.4.1/build/CMakeFiles/CMakeTmp'
+
+
