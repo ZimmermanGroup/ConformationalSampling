@@ -1,1 +1,1 @@
-#Question? Contact Shao-Yu Lu, email: shaoyulu@umich.edu
+#MOPAC version of conformational sampling. GSM must be available.
