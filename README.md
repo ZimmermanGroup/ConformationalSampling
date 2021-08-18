@@ -26,14 +26,21 @@ To run bcat.exe:
 ./bcat.exe [nconfs] [xyzfile] > output
 
 both [arguments] are optional. 
+
 nconfs specifies how many conformers OpenBabel will attempt to locate. default is 25000
+
 xyzfile default name is ligand.xyz.
 
 
 Input files for test_buildComplex:
+
 CHARGE1 (ligand), CHARGE2 (target)
+
 ADD (see NOTES in test_buildComplex directory)
+
 inpfileq (GSM, should be SM_TYPE OPT)
+
 ograd (interface to XTB for GSM)
+
 tm2orca.py 
 
