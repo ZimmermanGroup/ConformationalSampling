@@ -5,6 +5,7 @@
     
 #include "utils.h"
 #include "mopac.h"
+#include "xtb.h"
 #include "stringtools.h"
 #include "align.h"   
      
@@ -21,10 +22,15 @@ int get_natoms(string filename);
 int get_charge(string filename);
 void get_all_xyz(int natoms, string* anames, vector<double*> &xyzs, string xyzfile);
 int get_unique_conf(int nstruct, int* unique);
-void align_and_opt(int natoms1, int natoms2, string* anames, string* anamesm, string* anamest, int* anumbers, int* anumbersm, int charget, int nstruct, int* unique, vector<double*> xyzall, double* xyzm);
+void align_and_opt(int natoms1, int natoms2, string* anames, string* anamesm, string* anamest, int* anumbers, int* anumbersm, int charget, int nstruct, bool* unique, vector<double*> xyzall, double* xyzm);
 void write_all_xyz(int natoms, string* anames, double* E, vector<double*> xyzs, string xyzfile_string);
 void write_all_xyz(int natoms, string* anames, int nstruct, double* E, double** xyzs, string xyzfile_string);
 void write_gsm(int natoms, string* anames, int charge, int nstruct, double* E, double** xyzs, int nadd, int* adds);
 void do_gsm(int nstruct);
+
+void procedure_1(string xyzfile, string targetfile);
+void procedure_2(int nconf, string xyzfile, string targetfile);
+
+void check_bonding(int nstruct, ICoord ic1, int natoms1, string* anames, int* anumbers, vector<double*> xyzalla, bool* unique);
 
 

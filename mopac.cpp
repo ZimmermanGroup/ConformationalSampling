@@ -443,8 +443,8 @@ double Mopac::read_output(string filename) {
   return energy;
 }
 
-void Mopac::read_output2(string filename){
-
+void Mopac::read_output2(string filename)
+{
   energy = 10000;
   
   string oname = filename+".aux";
@@ -452,19 +452,18 @@ void Mopac::read_output2(string filename){
   string line;
   vector<string> tok_line;
   while(!output.eof())
-{ 
-   getline(output,line);
-   if(line.find("ENTHALPY_TOT")!=string::npos)
-{
-   getline(output,line);
-   tok_line = StringTools::tokenize(line, " \t");
-   energy=atof(tok_line[1].c_str());  
-}
-   }
-   cout << "temp test" << energy << endl;
-      
+  {
+    getline(output,line);
+    if(line.find("ENTHALPY_TOT")!=string::npos)
+    {
+      getline(output,line);
+      tok_line = StringTools::tokenize(line, " \t");
+      energy=atof(tok_line[1].c_str());  
+    }
+  }
+  //cout << "temp test" << energy << endl;
 
-
+  return;
 }
 
 

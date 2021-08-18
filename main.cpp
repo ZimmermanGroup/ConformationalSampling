@@ -1,26 +1,24 @@
 #include "main.h"
-void check_bonding(int nstruct, ICoord ic1, int natoms1, string* anames, int* anumbers, vector<double*> xyzalla, int* unique);
-void procedure_1(string xyzfile, string targetfile);
-void procedure_2(int nconf, string xyzfile, string targetfile);
 
 
 #define DIST_THRESH 0.2
+#define GSM_CMD "./gfstringq.exe"
 
-
-void opt_mopac(int charge, int natoms, string* anames, int* anumbers, vector<double*> xyzall, double* E, int type)
+void opt_semi(int charge, int natoms, string* anames, int* anumbers, vector<double*> xyzall, double* E, int type)
 {
   int N3 = natoms*3;
   int nstruct = xyzall.size();
 
   int* frz = new int[natoms];
   for (int i=0;i<natoms;i++) frz[i] = 0;
-  Mopac mopt;
-  mopt.alloc(natoms);
-  mopt.set_charge(charge);
-  // AD - Feb 16, 2017
-  // pointer called freeez which is an array of size natoms
-  // what are we freezing, and why are we freezing it?
-  mopt.freeze_d(frz);
+ #if USE_XTB
+  XTB sopt;
+ #else
+  Mopac sopt;
+ #endif
+  sopt.alloc(natoms);
+  sopt.set_charge(charge);
+  sopt.freeze_d(frz);
 
   int* done = new int[nstruct];
   for (int i=0;i<nstruct;i++) done[i] = 0;
@@ -28,43 +26,36 @@ void opt_mopac(int charge, int natoms, string* anames, int* anumbers, vector<dou
   for (int i=0;i<nstruct;i++)
   if (!done[i])
   {
-    // AD - Feb 16, 2017
-    // what is the difference between these three types
-    // 1 = mopt = ligand only
-    // 2 = moptb = ligand + metal
-    // 3 = ? 
     string nstr = StringTools::int2str(i,3,"0");
     string mfilename;
     if (type==1)
-      mfilename = "scratch/mopt"+nstr+".xyz";
+      mfilename = "scratch/sopt"+nstr;
     else if (type==2)
-      mfilename = "scratch/moptb"+nstr+".xyz";
+      mfilename = "scratch/soptb"+nstr;
     else
-      mfilename = "scratch/moptc"+nstr+".xyz";
+      mfilename = "scratch/soptc"+nstr;
   
-//    ICoord ic1,ic2;
-//    ic1.init(natoms,anumbers,anames,xyzall[i]);
-//    ic1.ic_create();
+    //ICoord ic1,ic2;
+    //ic1.init(natoms,anumbers,anames,xyzall[i]);
+    //ic1.ic_create();
 
-    mopt.reset(natoms,anumbers,anames,xyzall[i]);
-    E[i] = mopt.opt_check(mfilename);
+    sopt.reset(natoms,anumbers,anames,xyzall[i]);
+    E[i] = sopt.opt_check(mfilename);
     for (int j=0;j<N3;j++)
-      xyzall[i][j] = mopt.xyz[j];
+      xyzall[i][j] = sopt.xyz[j];
 
-//    ic2.init(natoms,anumbers,anames,xyzall[i]);
-//    ic2.ic_create();
+    //ic2.init(natoms,anumbers,anames,xyzall[i]);
+    //ic2.ic_create();
 
-//    int intact = compare_ic(ic1,ic2);
+    //int intact = compare_ic(ic1,ic2);
 
     done[i] = 1;
   }
 
-#if 1
   printf("  conformer energies:");
   for (int i=0;i<nstruct;i++)
-    printf(" %5.2f",E[i]);
+    printf(" %8.4f",E[i]);
   printf("\n");
-#endif
 
   delete [] done;
   delete [] frz;
@@ -74,8 +65,6 @@ void opt_mopac(int charge, int natoms, string* anames, int* anumbers, vector<dou
 
 int generate_conformers_and_opt(int nconf, string filename, double* &E, vector<double*> &xyzall)
 {
-//  string xyzfile = filename;
-  
   printf("  generating %4i conformers of %s \n",nconf,filename.c_str());
   string confile = "all.xyz";
   
@@ -86,11 +75,9 @@ int generate_conformers_and_opt(int nconf, string filename, double* &E, vector<d
   string cmd2 = "obabel " +filename+ " -oconfabreport -xf temgg.sdf -xr 1.0";
   system(cmd2.c_str());
 
-  //Amanda Dewyer - Feb 20, 2017
-  //appends original "test.xyz" file to the end of all.xyz so that it is sampled
   ifstream infile;
   fstream outfile;
-  infile.open("test.xyz");
+  infile.open("ligand.xyz");
   outfile.open("all.xyz", ios::out | ios::app);
   while(infile.good())
   {
@@ -101,7 +88,7 @@ int generate_conformers_and_opt(int nconf, string filename, double* &E, vector<d
   outfile.close();
   infile.close();  
 
-  //CHARGE1 = test.xyz charge, ligand charge - structure that conformational search is done on.
+  //CHARGE1 = ligand.xyz charge, ligand charge - structure that conformational search is done on.
   string cfilename = "CHARGE1";
   int charge = get_charge(cfilename);
   int natoms = get_natoms(filename);
@@ -119,11 +106,12 @@ int generate_conformers_and_opt(int nconf, string filename, double* &E, vector<d
 
   E = new double[nstruct];
   for (int i=0;i<nstruct;i++) E[i] = 0.;
-  
-  opt_mopac(charge,natoms,anames,anumbers,xyzall,E,1);
+
+ //ligand charge is zeroed
+  opt_semi(0,natoms,anames,anumbers,xyzall,E,1);
   write_all_xyz(natoms,anames,E,xyzall,"all2.xyz");
 
-#if 0
+ #if 0
   printf("   showing all structures \n");
   for (int i=0;i<nstruct;i++)
   {
@@ -131,7 +119,7 @@ int generate_conformers_and_opt(int nconf, string filename, double* &E, vector<d
     for (int j=0;j<natoms;j++)
       printf(" %2s %8.5f %8.5f %8.5f \n",anames[j].c_str(),xyzall[i][3*j+0],xyzall[i][3*j+1],xyzall[i][3*j+2]);
   }
-#endif
+ #endif
 
   delete [] anumbers;
   delete [] anames;
@@ -139,33 +127,9 @@ int generate_conformers_and_opt(int nconf, string filename, double* &E, vector<d
   return nstruct;
 }
 
-int main(int argc, char* argv[])
-{
-  printf("\n\n in main() \n");
-  string xyzfile = "test.xyz";
-  string targetfile = "target.xyz";
-  switch (argc){
-    case 2:
-      //printf(" case 2 \n");
-      xyzfile = argv[1];
-      break;
-    default:
-      break;
-  }
-  // AD - Feb 16, 2017
-  // Why is nconf hard coded?
-  // We run procedure_2 because we just want to generate optimized ligand conformers?
-  int nconf = 250000;
-//  procedure_1(xyzfile,targetfile);
-  procedure_2(nconf,xyzfile,targetfile);
-
-  return 0;
-}
-
 void procedure_2(int nconf, string xyzfile, string targetfile)
 {
-  // AD - Feb 16, 2017
-  // takes xyz file and runs conformer generation, and inital mopac opt
+  // takes xyz file and runs conformer generation, and initial opt
   ICoord ic1; 
   ic1.init(xyzfile);
   printf(" initial bonds \n");
@@ -173,20 +137,16 @@ void procedure_2(int nconf, string xyzfile, string targetfile)
 
   vector<double*> xyzall;
   double* E;
-  // AD - Feb 16, 2017
-  //why is nconf here so large in comparison to nconf for procedure 1?
   int nstruct = generate_conformers_and_opt(nconf,xyzfile,E,xyzall);
 
   return;
 }
 
-void procedure_1(string xyzfile, string targetfile)
+void procedure_1(int nconf, string xyzfile, string targetfile)
 {
-
-  // AD - Feb 16, 2017
   // Runs gsm to push ligand and metal center together
   // sums up charges to get overall charge
-  
+
   ICoord ic1; 
   ic1.init(xyzfile);
   printf(" initial bonds \n");
@@ -194,7 +154,7 @@ void procedure_1(string xyzfile, string targetfile)
 
   vector<double*> xyzall;
   double* E;
-  int nstruct = generate_conformers_and_opt(2000,xyzfile,E,xyzall);
+  int nstruct = generate_conformers_and_opt(nconf,xyzfile,E,xyzall);
 
   string cfilename = "CHARGE1";
   int charge1 = get_charge(cfilename);
@@ -219,7 +179,7 @@ void procedure_1(string xyzfile, string targetfile)
 
   int natomst = natoms1 + natoms2;
   int N3t = natomst*3;
-  	string* anamest = new string[natomst];
+  string* anamest = new string[natomst];
   int* anumberst = new int[natomst];
   for (int i=0;i<natoms1;i++)
     anamest[i] = anames[i];
@@ -232,10 +192,11 @@ void procedure_1(string xyzfile, string targetfile)
   for (int i=0;i<natoms2;i++)
     printf(" %2s %8.5f %8.5f %8.5f \n",anamesm[i].c_str(),xyzm[3*i+0],xyzm[3*i+1],xyzm[3*i+2]);
 
-  int* unique = new int[nstruct];
-  // AD - Feb 16, 2017
+  bool* unique = new bool[nstruct];
+  for (int i=0;i<nstruct;i++)
+    unique[i] = 1;
   // checks if structures are unique by reading in array of structures - unique is a pointer towards an array of structures
-  get_unique_conf(nstruct,unique);
+  //get_unique_conf(nstruct,unique);
 
   align_and_opt(natoms1,natoms2,anames,anamesm,anamest,anumbers,anumbersm,charget,nstruct,unique,xyzall,xyzm);
 
@@ -252,7 +213,7 @@ void procedure_1(string xyzfile, string targetfile)
     string gsmfilename = "scratch/firstnode.xyz"+nstr;
     xyz_read_last(natomst,xyzalla[i],gsmfilename);
   }
-  opt_mopac(charget,natomst,anamest,anumberst,xyzalla,E,2);
+  opt_semi(charget,natomst,anamest,anumberst,xyzalla,E,2);
   write_all_xyz(natomst,anamest,E,xyzalla,"all4.xyz");
 
   printf(" done generating complexes \n");
@@ -261,10 +222,7 @@ void procedure_1(string xyzfile, string targetfile)
   check_bonding(nstruct,ic1,natoms1,anames,anumbers,xyzalla,unique);
   printf("\n");
 
-  // AD - Feb 16, 2017
-  // Section of code chooses lowest E structures to add to all5.xyz
-  // Not sure how it decides what the energy cutoff for strctures is
-  // ** How does it decide?
+  //ranks all unique structures by energy
   vector<pair<double,int> > bestc;
   for (int i=0;i<nstruct;i++)
   if (unique[i])
@@ -301,11 +259,8 @@ void procedure_1(string xyzfile, string targetfile)
 }
 
 
-void check_bonding(int nstruct, ICoord ic1, int natoms1, string* anames, int* anumbers, vector<double*> xyzalla, int* unique)
+void check_bonding(int nstruct, ICoord ic1, int natoms1, string* anames, int* anumbers, vector<double*> xyzalla, bool* unique)
 {
-  // AD - Feb 16 2017
-  // Is this section supposed to make sure the ligand stays intact?
-  // Doesn't neccessarily work, a good number of my structures either broke or formed cycle structures
   printf("\n  now checking bonding \n");
   for (int i=0;i<nstruct;i++)
   {
@@ -333,10 +288,6 @@ void check_bonding(int nstruct, ICoord ic1, int natoms1, string* anames, int* an
 
 int read_adds(int* adds, string addfile)
 {
-  // AD - Feb 16, 2017
-  // would it make sense to read in the ADD moves separately, in other words look for
-  // mono-, bi-, tri-, and tetra- dentate structures
-  // rather than all ISOMERSXXXX files having all add moves present
   int nadd = 0;
 
   ifstream infile;
@@ -363,7 +314,7 @@ int read_adds(int* adds, string addfile)
 }
 
 
-void align_and_opt(int natoms1, int natoms2, string* anames, string* anamesm, string* anamest, int* anumbers, int* anumbersm, int charget, int nstruct, int* unique, vector<double*> xyzall, double* xyzm)
+void align_and_opt(int natoms1, int natoms2, string* anames, string* anamesm, string* anamest, int* anumbers, int* anumbersm, int charget, int nstruct, bool* unique, vector<double*> xyzall, double* xyzm)
 {
   int natomst = natoms1 + natoms2;
   
@@ -421,6 +372,7 @@ void do_gsm(int nstruct)
 //  printf("  skipping GSM step \n");
 //  return;
 
+  string gsm_cmd = GSM_CMD;
   string cmd;
   for (int i=0;i<nstruct;i++)
   {
@@ -434,17 +386,18 @@ void do_gsm(int nstruct)
     }
     else
     {
-      cmd = "./gfstringq.exe "+istr+" > scratch/paragsm"+nstr;
+      cmd = gsm_cmd + " " + istr + " > scratch/paragsm" + nstr;
       system(cmd.c_str());
     }
   }
 }
 
 void get_all_xyz(int natoms, string* anames, vector<double*> &xyzs, string xyzfile)
-{    
+{
   ifstream infile;
   infile.open(xyzfile.c_str());
-  if (!infile){
+  if (!infile)
+  {
     printf(" Error: couldn't open XYZ file: %s \n",xyzfile.c_str());
     exit(-1);
   } 
@@ -593,7 +546,7 @@ int get_natoms(string filename)
   return natoms;
 }
 
-int get_unique_conf(int nstruct, int* unique)
+int get_unique_conf(int nstruct, bool* unique)
 {
   int ns2 = nstruct * nstruct;
   int* similar = new int[ns2];
@@ -618,7 +571,7 @@ int get_unique_conf(int nstruct, int* unique)
       OBAlign align1 = OBAlign(mol1,mol2);
       align1.Align();
       double dist = align1.GetRMSD();
-      //printf(" difference (%2i-%2i): %10.6f \n",nf1,nf2,dist);
+      printf(" difference (%2i-%2i): %10.6f \n",nf1,nf2,dist);
       if (dist<DIST_THRESH) similar[nf1*nstruct+nf2] = 1;
 
       mol2.Clear();
@@ -641,8 +594,6 @@ int get_unique_conf(int nstruct, int* unique)
   if (unique[i])
     nf++;
   
-  // AD - Feb 16, 2017
-  // How does a similarity matrix work?
   printf("\n similarity matrix: \n");
   for (int i=0;i<nstruct;i++)
   {
@@ -745,4 +696,30 @@ void write_gsm(int natoms, string* anames, int charge, int nstruct, double* E, d
   return;
 }
 
+
+int main(int argc, char* argv[])
+{
+  printf("\n\n in main() \n");
+
+  string xyzfile = "ligand.xyz";
+  string targetfile = "target.xyz";
+  int nconf = 25000;
+
+  switch (argc){
+    case 2:
+      nconf = atoi(argv[1]);
+      break;
+    case 3:
+      //printf(" case 2 \n");
+      nconf = atoi(argv[1]);
+      xyzfile = argv[2];
+      break;
+    default:
+      break;
+  }
+  procedure_1(nconf,xyzfile,targetfile);
+//  procedure_2(nconf,xyzfile,targetfile);
+
+  return 0;
+}
 

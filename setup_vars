@@ -1,0 +1,12 @@
+#!/bin/bash
+
+module load intel/2019
+#on Michigan cluster, standard install of OpenBabel doesn't work
+module unload Babel
+
+#set up links to OpenBabel library
+export OBROOT=/home/paulzim/openbabel241b
+export PATH=$OBROOT/bin/:$PATH
+export PYTHONPATH=$OBROOT/lib/
+export LD_LIBRARY_PATH=$OBROOT/lib:$LD_LIBRARY_PATH
+

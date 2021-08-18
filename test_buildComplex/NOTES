@@ -1,0 +1,13 @@
+CHARGE files: total charges for ligand/target fragments
+
+ADD file: positions in ligand/target for adding connections
+Ligand is first, then target
+Use absolute position #s for each, respectively
+
+ograd: this is the interface to XTB.
+be sure to update the charge in the xtb line
+
+gfstringq.exe configured for ORCA must be available at command line
+
+allX.xyz files are the conformers at various stages,
+all5.xyz has the final XTB-optimized complexes.
