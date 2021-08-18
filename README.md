@@ -10,7 +10,9 @@ A working installation of OpenBabel should be linked in Makefile and setup_vars.
 
 
 Two procedures are available:
+
   procedure_2: generate conformers of the ligand
+
   procedure_1: same as procedure_2, then attempts to ligate to target.xyz
 
 main.cpp specifies which procedure is active (bottom of file). procedure_2 is default.
@@ -20,6 +22,7 @@ See test_conformersOnly for an example of procedure_2
 
 
 To run bcat.exe:
+
 ./bcat.exe [nconfs] [xyzfile] > output
 
 both [arguments] are optional. 
