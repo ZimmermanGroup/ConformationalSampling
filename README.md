@@ -15,7 +15,7 @@ Two procedures are available:
 
   procedure_1: same as procedure_2, then attempts to ligate to target.xyz
 
-main.cpp specifies which procedure is active (bottom of file). procedure_2 is default.
+main.cpp specifies which procedure is active (bottom of file). procedure_1 is default.
 
 See test_buildComplex for an example of procedure_1
 See test_conformersOnly for an example of procedure_2
