@@ -21,6 +21,7 @@ class XTB {
 
    int nskip;
    int* skip;
+   vector<int> constraints;
 
   public:
 
@@ -46,6 +47,7 @@ class XTB {
 
    void freeze(int* frzlist, int nfrz, int nfrz0);
    void freeze_d(int* frzlist);
+   void constrain(vector<int> constraints_new);
 
    double energy0;
    double energy;

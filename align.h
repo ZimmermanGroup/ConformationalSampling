@@ -13,6 +13,15 @@
 #include <cmath>
 #include <cstdlib>
 
+#include <openbabel/mol.h>
+#include <openbabel/obconversion.h>
+#include <openbabel/math/align.h>
+#include <openbabel/conformersearch.h>
+#include <openbabel/data.h>
+      
+using namespace std;
+using namespace OpenBabel;
+
 void print_xyz_gen(int natoms, string* anames, double* coords);
 
 class Align {
@@ -58,6 +67,7 @@ class Align {
    int avec1; //final rotation alignment, not implemented
    int avec2;
 
+   void init(OBMol &mol1, OBMol &mol2);
    void init(int natoms1i, string* anames1i, int* anumbers1i, double* xyz1i, int natoms2i, string* anames2i, int* anumbers2i, double* xyz2i);
    void add_third(int natoms3i, string* anames3i, int* anumbers3i, double* xyz3i);
    void align_zero();

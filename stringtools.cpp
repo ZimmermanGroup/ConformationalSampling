@@ -335,7 +335,7 @@ bool StringTools::findstr(ifstream &fstr, string tag){
    int linecount=0; // for debug purpose only
    string line;
 
-   while(getline(fstr, line)){
+   while((bool)getline(fstr, line)){
       linecount++;
       found=contains(line, tag);
       if (found) break;
@@ -351,7 +351,7 @@ bool StringTools::findstr(ifstream &fstr, string tag, string & outline){
    bool found=false;
    string line;
 
-   while(getline(fstr, line)){
+   while((bool)getline(fstr, line)){
       //      linecount++;
       found=contains(line, tag);
       if (found) {outline=line;break;}

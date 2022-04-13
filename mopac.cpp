@@ -424,7 +424,7 @@ double Mopac::read_output(string filename) {
   vector<string> tok_line;
   while(!output.eof()) 
   { 
-    getline(output,line);
+    (bool)getline(output,line);
 //    cout << " RR " << line << endl;
     if (line.find("CYCLE:     1")!=string::npos)
     {
@@ -453,10 +453,10 @@ void Mopac::read_output2(string filename)
   vector<string> tok_line;
   while(!output.eof())
   {
-    getline(output,line);
+    (bool)getline(output,line);
     if(line.find("ENTHALPY_TOT")!=string::npos)
     {
-      getline(output,line);
+      (bool)getline(output,line);
       tok_line = StringTools::tokenize(line, " \t");
       energy=atof(tok_line[1].c_str());  
     }
@@ -659,7 +659,7 @@ void Mopac::xyz_read(string filename)
 
   while(!output.eof()) 
   { 
-    getline(output,line);
+    (bool)getline(output,line);
 //    cout << " RR " << line << endl;
     if (count == 2)
     {
@@ -683,7 +683,7 @@ void Mopac::xyz_read(string filename)
     else if (line.find("CARTESIAN COORDINATES")!=string::npos && count == 1)
     {
       count++;
-      getline(output,line);
+      (bool)getline(output,line);
     }
 
   }
@@ -704,12 +704,12 @@ void Mopac::xyz_read_aux(string filename){
   int i = 0;
   while(!output.eof()) 
   { 
-    getline(output,line);
+    (bool)getline(output,line);
     //cout << " RR " << line << endl; fflush(stdout);
     if (line.find("ATOM_X_OPT")!=string::npos)
     {
       count++;
-      getline(output,line);
+      (bool)getline(output,line);
     }
     if (count>0 && i<natoms)
     {

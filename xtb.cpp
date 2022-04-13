@@ -64,6 +64,8 @@ double XTB::opt(string filename)
   string cmd;
   if (nfrz>0)
     cmd = "xtb --input xtb.inp --chrg " + charge_str + " " + filenamexyz + " --opt > " + outfile;
+  else if (constraints.size() > 0)
+    cmd = "xtb --input xtb.inp --chrg " + charge_str + " " + filenamexyz + " --opt > " + outfile;
   else
     cmd = "xtb --chrg " + charge_str + " " + filenamexyz + " --opt > " + outfile; 
   system(cmd.c_str());
@@ -143,7 +145,7 @@ double XTB::read_output(string filename)
   vector<string> tok_line;
   while(!output.eof()) 
   { 
-    getline(output,line);
+    (bool)getline(output,line);
     if (line.find("TOTAL ENERGY")!=string::npos)
     {
       //cout << line << endl;
@@ -279,6 +281,11 @@ void XTB::freeze_d(int* frzlist_new)
   return;
 }
 
+void XTB::constrain(vector<int> constraints_new)
+{
+  constraints = constraints_new;
+}
+
 void XTB::reset(int natoms_i, int* anumbers_i, string* anames_i, double* xyz_i)
 {
  #if 0
@@ -350,11 +357,11 @@ void XTB::xyz_read(string filename)
   vector<string> tok_line;
   int i = 0;
 
-  getline(output,line);
-  getline(output,line);
+  (bool)getline(output,line);
+  (bool)getline(output,line);
   while(!output.eof()) 
   { 
-    getline(output,line);
+    (bool)getline(output,line);
     //cout << " RR " << line << endl;
     while (i<natoms && skip[i])
       i++;

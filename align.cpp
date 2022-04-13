@@ -1799,6 +1799,27 @@ int Align::check_frag_3(int a1, int a2)
   return same_frag;
 }
 
+void Align::init(OBMol &mol1, OBMol &mol2)
+{
+  OBElementTable etab;
+  vector<string> anames1;
+  vector<int> anumbers1;
+  vector<string> anames2;
+  vector<int> anumbers2;
+  for (int i=1; i<=mol1.NumAtoms(); ++i)
+  {
+    OBAtom* atom = mol1.GetAtom(i);
+    anames1.push_back(etab.GetSymbol(atom->GetAtomicNum()));
+    anumbers1.push_back(atom->GetAtomicNum());
+  }
+  for (int i=1; i<=mol2.NumAtoms(); ++i)
+  {
+    OBAtom* atom = mol2.GetAtom(i);
+    anames2.push_back(etab.GetSymbol(atom->GetAtomicNum()));
+    anumbers2.push_back(atom->GetAtomicNum());
+  }
+  init(mol1.NumAtoms(), anames1.data(), anumbers1.data(), mol1.GetCoordinates(), mol2.NumAtoms(), anames2.data(), anumbers2.data(), mol2.GetCoordinates());
+}
 
 void Align::init(int natoms1i, string* anames1i, int* anumbers1i, double* xyz1i, int natoms2i, string* anames2i, int* anumbers2i, double* xyz2i)
 {

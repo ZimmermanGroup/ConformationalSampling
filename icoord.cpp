@@ -1792,14 +1792,14 @@ void ICoord::structure_read(string xyzfile){
   
   string line;
   bool success=true;
-  success=getline(infile, line);
+  success=(bool)getline(infile, line);
   if (success){
     int length=StringTools::cleanstring(line);
     natoms=atoi(line.c_str());
   }
   cout <<"  natoms: " << natoms << endl;
   
-  success=getline(infile, line);
+  success=(bool)getline(infile, line);
 //  if (success){  
 //    comment=line;
 //  }
@@ -1811,7 +1811,7 @@ void ICoord::structure_read(string xyzfile){
     
   //cout <<"  -Reading the atomic names...";
   for (int i=0;i<natoms;i++){
-    success=getline(infile, line);
+    success=(bool)getline(infile, line);
     int length=StringTools::cleanstring(line);
     vector<string> tok_line = StringTools::tokenize(line, " \t");
     anames[i]=tok_line[0];
@@ -1837,10 +1837,10 @@ void ICoord::structure_read(string xyzfile){
   
   
 //  for (int i=1;i<=2;i++){
-    success=getline(infile, line);
-    success=getline(infile, line);
+    success=(bool)getline(infile, line);
+    success=(bool)getline(infile, line);
     for (int j=0;j<natoms;j++){
-      success=getline(infile, line);
+      success=(bool)getline(infile, line);
       int length=StringTools::cleanstring(line);
       vector<string> tok_line = StringTools::tokenize(line, " \t");
       coords[3*j+0]=atof(tok_line[1].c_str());
@@ -1899,10 +1899,10 @@ int ICoord::read_ics(string filename)
   string line;
   bool success=true;
   int type = 1;
-  success=getline(infile, line);
+  success=(bool)getline(infile, line);
   while (!infile.eof())
   {
-    success=getline(infile, line);
+    success=(bool)getline(infile, line);
     //cout << "RR0: " << line << endl;
     int length=StringTools::cleanstring(line);
     vector<string> tok_line = StringTools::tokenize(line, " \t");
@@ -1919,7 +1919,7 @@ int ICoord::read_ics(string filename)
 
         for (int i=0;i<nbonds;i++)
         {
-          success=getline(infile, line);
+          success=(bool)getline(infile, line);
           //cout << "RR: " << line << endl;
           length=StringTools::cleanstring(line);
           tok_line = StringTools::tokenize(line, " \t");
@@ -1941,7 +1941,7 @@ int ICoord::read_ics(string filename)
 
         for (int i=0;i<nangles;i++)
         {
-          success=getline(infile, line);
+          success=(bool)getline(infile, line);
           //cout << "RR: " << line << endl;
           length=StringTools::cleanstring(line);
           tok_line = StringTools::tokenize(line, " \t");
@@ -1964,7 +1964,7 @@ int ICoord::read_ics(string filename)
 
         for (int i=0;i<ntor;i++)
         {
-          success=getline(infile, line);
+          success=(bool)getline(infile, line);
           //cout << "RR: " << line << endl;
           length=StringTools::cleanstring(line);
           tok_line = StringTools::tokenize(line, " \t");
