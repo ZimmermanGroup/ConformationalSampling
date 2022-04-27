@@ -53,19 +53,10 @@ void opt_semi(int charge, int natoms, string* anames, int* anumbers, vector<doub
     else
       mfilename = "scratch/soptc"+nstr;
   
-    //ICoord ic1,ic2;
-    //ic1.init(natoms,anumbers,anames,xyzall[i]);
-    //ic1.ic_create();
-
     sopt.reset(natoms,anumbers,anames,xyzall[i]);
     E[i] = sopt.opt_check(mfilename);
     for (int j=0;j<N3;j++)
       xyzall[i][j] = sopt.xyz[j];
-
-    //ic2.init(natoms,anumbers,anames,xyzall[i]);
-    //ic2.ic_create();
-
-    //int intact = compare_ic(ic1,ic2);
 
     done[i] = 1;
   }
@@ -83,84 +74,19 @@ void opt_semi(int charge, int natoms, string* anames, int* anumbers, vector<doub
 
 void generate_conformers_and_opt(OBMol &mol, int nconf)
 {
-  // printf("  generating %4i conformers of %s \n",nconf,filename.c_str());
-  // string confile = "all.xyz";
-  
-  // string nconfstr = StringTools::int2str(nconf,1,"0");
-  // string cmd = "obabel "+filename+" -O "+confile+" --confab --conf "+nconfstr;
-  // system(cmd.c_str());
-
-  // string cmd2 = "obabel " +filename+ " -oconfabreport -xf temgg.sdf -xr 1.0";
-  // system(cmd2.c_str());
-
-  // ifstream infile;
-  // fstream outfile;
-  // infile.open("ligand.xyz");
-  // outfile.open("all.xyz", ios::out | ios::app);
-  // while(infile.good())
-  // {
-  //   string line;
-  //   getline(infile, line);
-  //   outfile << line << endl;
-  // }
-  // outfile.close();
-  // infile.close();  
-
-  // //CHARGE1 = ligand.xyz charge, ligand charge - structure that conformational search is done on. 
-  // string cfilename = "CHARGE1";
-  // int charge = get_charge(cfilename);
-  // int natoms = get_natoms(filename);
-  // int N3 = natoms*3;
-  // printf("  there are %2i atoms \n",natoms);
-
-  // string* anames = new string[natoms];
-  // get_all_xyz(natoms,anames,xyzall,confile);
-
-
   OBConformerSearch cs;
   cs.Setup(mol);
   cs.Search();
   cs.GetConformers(mol);
   write_all_xyz(mol, "all_openbabel.xyz");
-  // obconversion.WriteFile(&mol, "all_openbabel.xyz");
 
   opt_semi(mol, vector<int>(), 1);
   write_all_xyz(mol, "all_openbabel2.xyz");
   
-//   int nstruct = xyzall.size();
-//   int* anumbers = new int[natoms];
-//   for (int i=0;i<natoms;i++)
-//     anumbers[i] = PTable::atom_number(anames[i]);
-
-
-//   E = new double[nstruct];
-//   for (int i=0;i<nstruct;i++) E[i] = 0.;
-
-//  //ligand charge is zeroed
-//   opt_semi(0,natoms,anames,anumbers,xyzall,E,1);
-//   write_all_xyz(natoms,anames,E,xyzall,"all2.xyz");
-
-//  #if 0
-//   printf("   showing all structures \n");
-//   for (int i=0;i<nstruct;i++)
-//   {
-//     printf(" %2i \n\n",natoms);
-//     for (int j=0;j<natoms;j++)
-//       printf(" %2s %8.5f %8.5f %8.5f \n",anames[j].c_str(),xyzall[i][3*j+0],xyzall[i][3*j+1],xyzall[i][3*j+2]);
-//   }
-//  #endif
-
-//   delete [] anumbers;
-//   delete [] anames;
-
-  // return nstruct;
 }
 
 void procedure(int nconf, string xyzfile, string targetfile, int procedure_type)
 {
-  // Runs gsm to push ligand and metal center together
-  // sums up charges to get overall charge
-
   ICoord ic1; 
   ic1.init(xyzfile);
   printf(" initial bonds \n");
@@ -183,111 +109,15 @@ void procedure(int nconf, string xyzfile, string targetfile, int procedure_type)
   int charge2 = get_charge(cfilename);
   int charget = charge1 + charge2;
 
-  // int natoms1 = get_natoms(xyzfile);
-  // int natoms2 = get_natoms(targetfile);
-  // string* anames = new string[natoms1];
-  // string* anamesm = new string[natoms2];
-  // int* anumbers = new int[natoms1];
-  // int* anumbersm = new int[natoms2];
-  // double* xyz0 = new double[3*natoms1];
-  // double* xyzm = new double[3*natoms2];
-  // xyz_read(natoms1,anames,xyz0,xyzfile);
-
   OBMol target;
   obconversion.ReadFile(&target, targetfile);
+
   mol.SetTotalCharge(charge1);
   target.SetTotalCharge(charge2);
-  // xyz_read(natoms2,anamesm,xyzm,targetfile);
-  // for (int i=0;i<natoms1;i++)
-  //   anumbers[i] = PTable::atom_number(anames[i]);
-  // for (int i=0;i<natoms2;i++)
-  //   anumbersm[i] = PTable::atom_number(anamesm[i]);
-
-  // int natomst = natoms1 + natoms2;
-  // int N3t = natomst*3;
-  // string* anamest = new string[natomst];
-  // int* anumberst = new int[natomst];
-  // for (int i=0;i<natoms1;i++)
-  //   anamest[i] = anames[i];
-  // for (int i=0;i<natoms2;i++)
-  //   anamest[natoms1+i] = anamesm[i];
-  // for (int i=0;i<natomst;i++)
-  //   anumberst[i] = PTable::atom_number(anamest[i]);
-
-  // printf("  target structure: \n");
-  // for (int i=0;i<natoms2;i++)
-  //   printf(" %2s %8.5f %8.5f %8.5f \n",anamesm[i].c_str(),xyzm[3*i+0],xyzm[3*i+1],xyzm[3*i+2]);
 
   int nstruct = mol.NumConformers();
-  // bool* unique = new bool[nstruct];
-  // for (int i=0;i<nstruct;i++)
-  //   unique[i] = 1;
-  // checks if structures are unique by reading in array of structures - unique is a pointer towards an array of structures
-  //get_unique_conf(nstruct,unique);
 
-  //JOSH - should become align and opt with constraint
   align_and_opt_with_constraint(mol, target);
-  // align_and_opt(natoms1,natoms2,anames,anamesm,anamest,anumbers,anumbersm,charget,nstruct,unique,xyzall,xyzm);
-  return;
-#if 0
-  //JOSH - won't need this anymore after replacing GSM with xtb constraint functionality
- //retrieve firstnode.xyz files from GSM
-  vector<double*> xyzalla;
-  for (int i=0;i<nstruct;i++)
-  {
-    double* xyz1 = new double[3*natomst];
-    xyzalla.push_back(xyz1);
-  }
-  for (int i=0;i<nstruct;i++)
-  {
-    string nstr = StringTools::int2str(i,4,"0");
-    string gsmfilename = "scratch/firstnode.xyz"+nstr;
-    xyz_read_last(natomst,xyzalla[i],gsmfilename);
-  }
-  opt_semi(charget,natomst,anamest,anumberst,xyzalla,E,2);
-  write_all_xyz(natomst,anamest,E,xyzalla,"all4.xyz");
-
-  printf(" done generating complexes \n");
-
-
-  check_bonding(nstruct,ic1,natoms1,anames,anumbers,xyzalla,unique);
-  printf("\n");
-
-  //ranks all unique structures by energy
-  vector<pair<double,int> > bestc;
-  for (int i=0;i<nstruct;i++)
-  if (unique[i])
-  {
-     pair<double,int> newc(E[i],i);
-     bestc.push_back(newc);
-  }
-  sort(bestc.begin(),bestc.end());
-
-  int nstructf = bestc.size();
-  printf("  best structures: \n");
-  for (int i=0;i<nstructf;i++)
-  {
-    printf("   %2i: %8.5f \n",bestc[i].second+1,bestc[i].first);
-  }
-
-  double* E1 = new double[nstructf];
-  double** xyzb = new double*[nstructf];
-  for (int i=0;i<nstructf;i++)
-    xyzb[i] = new double[N3t];
-
-  for (int i=0;i<nstructf;i++)
-  {
-    int i1 = bestc[i].second;
-    E1[i] = E[i1];
-    double* xyz1 = xyzalla[i1];
-    for (int j=0;j<N3t;j++)
-      xyzb[i][j] = xyz1[j];
-  }
-
-  write_all_xyz(natomst,anamest,nstructf,E1,xyzb,"all5.xyz");
-
-  return;
-#endif
 }
 
 
