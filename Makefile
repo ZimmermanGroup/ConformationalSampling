@@ -4,7 +4,7 @@
 CMD = bcat.exe
 
 # -------- Define environmental variable C_COMPILER -----------
- CC = icpc -fopenmp -I$(OBROOT)/include/openbabel-2.0/ \
+ CC = icpc -std=c++11 -fopenmp -I$(OBROOT)/include/openbabel-2.0/ \
                    -I/home/paulzim/bcat/eigen2/ -DUSE_XTB=1
 DFLAGS = # the cpp flags to be used
 OFLAGS =  # optimization

@@ -24,6 +24,7 @@ int get_natoms(string filename);
 int get_charge(string filename);
 void get_all_xyz(int natoms, string* anames, vector<double*> &xyzs, string xyzfile);
 int get_unique_conf(int nstruct, int* unique);
+OBMol sort_conformers_by_energy(OBMol mol);
 void opt_semi(OBMol &mol, vector<int> constraints = vector<int>(), int type = 1);
 void opt_semi(int charge, int natoms, string* anames, int* anumbers, vector<double*> xyzall, double* E, vector<int> constraints, int type);
 void align_and_opt(int natoms1, int natoms2, string* anames, string* anamesm, string* anamest, int* anumbers, int* anumbersm, int charget, int nstruct, bool* unique, vector<double*> xyzall, double* xyzm);

@@ -208,7 +208,8 @@ void align_and_opt_with_constraint(OBMol &mol, OBMol &target)
   // use analog of opt_semi for the constraint
   opt_semi(combined_mol, adds, 2);
   write_all_xyz(combined_mol, "all_openbabel4.xyz");
-
+  combined_mol = sort_conformers_by_energy(combined_mol);
+  write_all_xyz(combined_mol, "all_openbabel5.xyz");
 }
 
 void align_and_opt(int natoms1, int natoms2, string* anames, string* anamesm, string* anamest, int* anumbers, int* anumbersm, int charget, int nstruct, bool* unique, vector<double*> xyzall, double* xyzm)
@@ -510,6 +511,25 @@ int get_unique_conf(int nstruct, bool* unique)
   return nf;
 }
 
+OBMol sort_conformers_by_energy(OBMol mol)
+{
+  vector<double> energies(mol.GetEnergies());
+  vector<int> indices(energies.size());
+  // populates a list of sequentially increasing indices
+  iota(indices.begin(), indices.end(), 0);
+  // argsort of the energies inspired by https://stackoverflow.com/a/12399290
+  sort(indices.begin(), indices.end(),
+      [&energies](int i1, int i2) {return energies[i1] < energies[i2];});
+  
+  vector<double*> original_conformers = mol.GetConformers();
+  for(int i=0; i < energies.size(); ++i) {
+    mol.GetConformers()[i] = original_conformers[indices[i]];
+  }
+  sort(energies.begin(), energies.end());
+  mol.SetEnergies(energies);
+  return mol;
+}
+
 void write_all_xyz(OBMol &mol, string xyzfile_string)
 {
   OBElementTable etab;
@@ -615,6 +635,7 @@ void write_gsm(int natoms, string* anames, int charge, int nstruct, double* E, d
 int main(int argc, char* argv[])
 {
   printf("\n\n in main() \n");
+  cout << "C++ version: " << __cplusplus << endl;
 
   string xyzfile = "ligand.xyz";
   string targetfile = "target.xyz";
